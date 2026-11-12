@@ -1,0 +1,9 @@
+{
+    "recipe":
+    [
+    	["adamo-carbon-syngas-FT-process","adamo-carbon-heavy-oil-from-syngas"],
+        ["adamo-carbon-basic-FT-process","adamo-carbon-light-oil-from-syngas"],
+        ["adamo-carbon-advanced-FT-process","adamo-carbon-petroleum-gas-from-syngas"]
+    ]
+}
+

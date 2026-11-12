@@ -1,0 +1,343 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2020-09-29
+
+  Recipes:
+    - Renormalized syngas recipes.
+    - Balanced sulfur output in Advanced natural gas processing, and
+      reduced emissions.
+    - Finished new recipe tint system and applied to derived recipes.
+
+  Changes:
+    - Code refactoring, improved chemical dependencies.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.9
+Date: 2020-07-19
+
+  Fixes:
+    - Codebase update to (hopefully) fix reported bug.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+Date: 2020-07-16
+
+  Changes:
+    - Background updates to codebase.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.7
+Date: 2020-07-01
+
+  Recipes:
+    - Added small amounts of petroleum gas to the Fischer-Tropsch
+      recipes for added realism and to help them play more nicely
+      with the Fluid Permutations mod.
+    - Removed fluidbox indexes on all (I think) recipes as they
+      are no longer needed to maintain consistency with vanilla
+      recipes.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: 2020-02-03
+
+  Changes:
+    - Moved mod to version 18.
+    - Updated several icon_size values because apparently
+      people want huge icons, now.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 2019-11-26
+
+  Locale:
+    - Added Russian translations provided by Va7ya.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 2019-11-03
+
+  Audio:
+    - Reduced volume of natural gas wellhead by 1/2.
+
+  Changes:
+    - Added option to disable vanilla fluid fuel values.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 2019-10-04
+
+  Graphics:
+    - Improved color sharing on new syngas recipes.
+    - Improved syngas colors.
+
+  Recipes:
+    - Set tsen's coking recipe "hidden", since it
+      is made in a furnace.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2019-10-01
+
+  Balancing:
+    - Advanced Fischer-Tropsch recipes now
+      use syngas instead of direct methane.
+    - Added heavy oil F-T recipe and solid
+      fuel recipes for light and heavy oil
+      to be enabled by the "flammables"
+      tech.
+    - Removed sulfur waste product from
+      productivity bonus in advanced gas
+      processing recipe.
+
+  Recipes:
+    - Added syngas-based recipes for some
+      recipes that take coal as an ingredient,
+      e.g. grenades.
+    - Added optional recipe to coke coal
+      into solid fuel (off by default),
+      courtesy of tsen.
+
+  Changes:
+    - Some code refactoring.
+    - Fixed a potential bug.
+    - Removed steam reforming recipe in the
+      case the methane option is not chosen,
+      rather than replacing methane with 
+      petroleum gas.
+    - Removed redundant technology effects.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2019-09-30
+
+  Changes:
+    - Removed gas-boiler dependency since
+      most fluid bugs have now been fixed.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2019-09-30
+
+  Graphics:
+    - Updated chemistry recipe tints for
+      new chemical plant graphic.
+
+  Entities:
+    - Changed sound on wellhead so it 
+      sounds like a wellhead instead of
+      a pumpjack.
+
+  Balancing:
+    - Removed coal from solid-fuel-from-methane
+      recipe and increased methane ingredient
+      amount from 40 to 50. All fluid fuel
+      values are now equal to solid fuel recipe
+      numbers for all fluids whose fuel values
+      are set by my mods.
+    - Increased gas wellhead output amount
+      from 10 to 30, to better match power
+      availability of vanilla oil resource.
+    - Tweaked natural gas autoplace settings
+      to increase richness by about 10%.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.16
+Date: 2019-09-06
+
+  Fixes:
+    - Fixed changelog.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.15
+Date: 2019-09-06
+
+  Fixes:
+    - Fixed bug related to adding some recipes to the
+      productivity module limitation tables under the
+      wrong settings.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.14
+Date: 2019-09-06
+
+  Fuel:
+    - Removed sulfur as a fuel type. I felt that this
+      mod should only affect carbon concepts. Sulfur
+      burning is still available in my heat processing
+      mod, and will probably become its own mod, eventually.
+
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.13
+Date: 2019-09-05
+
+  Recipes:
+    - Updated all recipe tints for the new
+      chemical plant graphic.
+
+  Prototypes:
+    - Moved gas-boiler to separate gas-boiler mod.
+      I will maintain it as a requirement for some
+      amount of time, because loading a map that uses
+      a fluid boiler, after removing the boiler,
+      causes a crash. I'll open a bug report for the
+      issue.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 2019-08-30
+
+  Balancing:
+    - Increased gasifier recipe result amount to 50,
+      and increased FT recipe time to 10, which should
+      result in one gasifier being a bit more than
+      sufficient to provide for one refinery with 
+      modules but without beacons.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 2019-08-28
+
+  Fixes:
+    - Added syngas FT recipe to productivity module list.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 2019-08-28
+
+  Recipes:
+    - Added F-T process for syngas. You can now do liquefaction
+      on any fuel by turning it into syngas, first.
+
+  Balancing:
+    - Rebalanced F-T recipes again, to match with vanilla
+      coal liquefaction. The recipes are more productive, now.
+    - Balanced gas processing recipes to match.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2019-08-26
+
+  Updates:
+    - Mod display name changed.
+
+  Crafting:
+    - Added Gasifier, which takes water/steam and any fuel to
+      create syngas. Thanks to GotLag for the stack graphic.
+
+  Balancing:
+    - Decreased natural gas and methane fluid fuel_value
+      by 2/5 to match fuel conservation with other processes.
+    - Increased richness of methane resources by 5/2 to off-set.
+    - Decreased sulfur output of advance gas processing by 1/5.
+      This is less physical but I'm concerned about sulfur back-up
+      due to increased processing from increased resource richness.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2019-08-23
+
+  Fixes:
+    - Added syngas to advanced-oil-processing tech.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2019-08-23
+
+  Carbon:
+    - Added syngas, made from methane steam reforming. 
+      Use syngas in your recipes to make other carbon-based
+      materials. For realism in your recipes, the H2 ratio 
+      relative to CO goes up at the expense of a copper
+      catalyst (low-temp),  or goes down at the expense
+      of an iron catalyst (high-temp). Fluid name is
+      "adamo-carbon-syngas". I am not changing the F-T
+      processes to use syngas at this time, and I probably
+      won't, because I want syngas as an optional product,
+      but F-T is fundamental to oil production using 
+      methane. If you are using your own syngas, put the
+      fluid prototype name into the setting, and any
+      syngas recipes I come up with use yours, instead.
+
+  Balancing:
+    - Increased cost of activated-solid-fuel to 50 methane gas,
+      for balance with the F-T process.
+    - Increased cost of rocket-fuel to match. Rocket fuel is cheaper
+      than the equivalent amount of solid fuel from methane, to reflect
+      the real-life goodness of methane rocket fuel. If the recipes turn
+      out to be too expensive, I'll increase the resource abundance
+      in an update.
+    - Increased steam input on Fischer-Tropsch process
+      to satisfy molecular hydrogen balance.
+    - Removed steel-plate from rocket-fuel recipe, since
+      the original recipe doesn't require it, either.
+
+  Graphics:
+    - Minor adjustments to fluid colors.
+    - Added proper chemistry recipe tints.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2019-08-17
+
+  Recipes:
+    - Moved methane-based rocket fuel recipe to 
+      crafting category "chemistry", since it uses
+      two fluids.
+  Updates:
+    - Added fast_replaceable_group "boiler" to gas-fired
+      boiler.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2019-08-09
+
+  Recipes:
+    - Scaled the advanced processing recipes to
+      eliminate annoying logistics.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2019-08-08
+
+  Graphics:
+    - Fixed boiler graphics.
+
+  Recipes:
+    - Added recipes to productivity limitation tables.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2019-08-04
+
+  Changes:
+    - Clearing up dependencies and factoring code.
+    - Fixed advanced natural gas processing recipe.
+    - Cleaned up settings controls and added support for Sulfur Production
+      from Oils.
+    - Removed some potentially-problematic fluidbox_index values.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2019-08-04
+
+  Changes:
+    - Finalized fluid colors. Not perfect, but I think this might be the
+      best balance.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2019-08-03
+
+  Changes:
+    - After messing around with a bunch of icons, I think I decided on what
+      icon to use for the processing recipes.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2019-08-02
+
+  Changes:
+    - Had to remove fluidbox_index values because using them on multiple
+      recipe inputs or outputs can apparently cause a desync.
