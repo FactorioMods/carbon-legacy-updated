@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 2026-11-12
+  Changes:
+    - Port the legacy natural-gas, syngas, methane and gasifier processing chain to Factorio 2.1, retaining original identities and startup choices.
+    - Update recipe productivity, fluid connections and prototype encodings, and adopt original Carbon save state.
+  Testing:
+    - Native combined-profile loading, namespace preservation and paired 1200-tick consistency checks passed.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2020-09-29
 

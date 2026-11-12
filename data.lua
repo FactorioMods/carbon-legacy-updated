@@ -151,7 +151,7 @@ gas_tech = {
 	type = "technology",
 	name = "adamo-carbon-gas-processing",
 	icon_size = 132,
-	icon = "__fixadamo-carbon__/graphics/technology/gas-processing.png",
+	icon = "__carbon-legacy-updated__/graphics/technology/gas-processing.png",
 	prerequisites = {"fluid-handling"},
 	unit = {
 		count = 100,
@@ -178,7 +178,7 @@ resource_autoplace.initialize_patch_set("adamo-carbon-natural-gas",false)
 natural_gas_resource = {
 	type = "resource",
 	name = "adamo-carbon-natural-gas",
-	icon = "__fixadamo-carbon__/graphics/icons/natural-gas.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/natural-gas.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "adamo-carbon-gas",
@@ -198,7 +198,7 @@ natural_gas_resource = {
 				name = "adamo-carbon-natural-gas",
 				amount_min = 30,
 				amount_max = 30,
-				probability = 1
+				independent_probability = 1
 		}}
 	},
 	collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
@@ -219,7 +219,7 @@ natural_gas_resource = {
 	stages = {
 		sheet = {
 			filename =
-				"__fixadamo-carbon__/graphics/entity/"
+				"__carbon-legacy-updated__/graphics/entity/"
 				.."natural-gas.png",
 			priority = "extra-high",
 			width = 75,
@@ -238,7 +238,7 @@ if not using_methane then
 			name = "petroleum-gas",
 			amount_min = 6,
 			amount_max = 6,
-			probability = 1
+			independent_probability = 1
 		}}
 	}
 	natural_gas_resource.icon = "__base__/graphics/icons/fluid/petroleum-gas.png"
@@ -266,39 +266,39 @@ natural_gas_fluid = {
 	type = "fluid",
 	name = "adamo-carbon-natural-gas",
 	order = "a[fluid]-b[adamo-carbon-natural-gas]",
-	icon = "__fixadamo-carbon__/graphics/icons/natural-gas.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/natural-gas.png",
 	icon_size = 32,
 	base_color = ng_base_color,
 	flow_color = ng_flow_color,
 	default_temperature = 25,
 	max_temperature = 750,
-	heat_capacity = "0.05KJ",
+	heat_capacity = "0.05kJ",
 	emissions_multiplier=0.5
 }
 methane_fluid = {
 	type = "fluid",
 	name = "adamo-carbon-methane",
 	order = "a[fluid]-f[adamo-carbon-methane]",
-	icon = "__fixadamo-carbon__/graphics/icons/methane.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/methane.png",
 	icon_size = 32,
 	base_color = methane_base_color,
 	flow_color = methane_flow_color,
 	default_temperature = 25,
 	max_temperature = 750,
-	heat_capacity = "0.05KJ",
+	heat_capacity = "0.05kJ",
 	emissions_multiplier=0.5,
 }
 syngas_fluid = {
 	type = "fluid",
 	name = "adamo-carbon-syngas",
 	order = "a[fluid]-f[adamo-carbon-syngas]",
-	icon = "__fixadamo-carbon__/graphics/icons/syngas.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/syngas.png",
 	icon_size = 32,
 	base_color = syngas_base_color,
 	flow_color = syngas_flow_color,
 	default_temperature = 25,
 	max_temperature = 750,
-	heat_capacity = "0.05KJ",
+	heat_capacity = "0.05kJ",
 	emissions_multiplier=0.5,
 	fuel_value = energy_div(
 		get_fuel_value(data.raw.item["solid-fuel"]),
@@ -312,7 +312,7 @@ natural_gas_processing_recipe = {
 	category = "oil-processing",
 	enabled = false,
 	icon =
-		"__fixadamo-carbon__/graphics/icons/"
+		"__carbon-legacy-updated__/graphics/icons/"
 		.."basic-natural-gas-processing.png",
 	icon_size = 32,
 	subgroup = "fluid-recipes",
@@ -343,7 +343,7 @@ adv_natural_gas_processing_recipe = {
 	category = "oil-processing",
 	enabled = false,
 	icon =
-		"__fixadamo-carbon__/graphics/icons/"
+		"__carbon-legacy-updated__/graphics/icons/"
 		.."advanced-natural-gas-processing.png",
 	icon_size = 32,
 	subgroup = "fluid-recipes",
@@ -543,14 +543,14 @@ crude_oil_fuel_recipe.ingredients = {{
 	name = "crude-oil",
 	amount = fuelfactors["crude-oil"]
 }}
-crude_oil_fuel_recipe.icon = "__fixadamo-carbon__/graphics/icons/solid-fuel-from-crude-oil.png"
+crude_oil_fuel_recipe.icon = "__carbon-legacy-updated__/graphics/icons/solid-fuel-from-crude-oil.png"
 crude_oil_fuel_recipe.icon_size = 32
 crude_oil_fuel_recipe.order = "b[fluid-chemistry]-f[adamo-carbon-solid-fuel-from-crude-oil]"
 coal_fuel_recipe = {
 	type = "recipe", name = "adamo-carbon-solid-fuel-from-coal",
 	category = "smelting",
 	icon =
-		"__fixadamo-carbon__/graphics/icons/"
+		"__carbon-legacy-updated__/graphics/icons/"
 		.."solid-fuel-from-coal.png",
 	icon_size = 32,
 	order =
@@ -566,7 +566,7 @@ wood_fuel_recipe = {
 	type = "recipe", name = "adamo-carbon-solid-fuel-from-coal",
 	category = "smelting",
 	icon =
-		"__fixadamo-carbon__/graphics/icons/"
+		"__carbon-legacy-updated__/graphics/icons/"
 		.."solid-fuel-from-wood.png",
 	icon_size = 32,
 	order =
@@ -590,7 +590,7 @@ methane_solid_fuel_recipe = {
 	}},
 	result = "solid-fuel",
 	icon =
-		"__fixadamo-carbon__/graphics/icons/"
+		"__carbon-legacy-updated__/graphics/icons/"
 		.."solid-fuel-from-methane.png",
 	icon_size = 32,
 	subgroup = "fluid-recipes",
@@ -637,7 +637,7 @@ LPG_cracking_recipe = {
 			name="adamo-carbon-methane",
 			amount=20
 	}},
-	icon = "__fixadamo-carbon__/graphics/icons/petroleum-gas-cracking.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/petroleum-gas-cracking.png",
 	icon_size = 32,
 	subgroup = "fluid-recipes",
 	order = "b[fluid-chemistry]-c1[adamo-carbon-petroleum-gas-cracking]",
@@ -655,7 +655,7 @@ natural_gas_wellhead_entity.resource_categories = {"adamo-carbon-gas"}
 natural_gas_wellhead_entity.energy_source.emissions_per_minute = 6
 natural_gas_wellhead_entity.energy_usage = "60kW"
 natural_gas_wellhead_entity.icon_size = 32
-natural_gas_wellhead_entity.icon = "__fixadamo-carbon__/graphics/icons/natural-gas-wellhead.png"
+natural_gas_wellhead_entity.icon = "__carbon-legacy-updated__/graphics/icons/natural-gas-wellhead.png"
 natural_gas_wellhead_entity.icon_mipmaps = nil
 natural_gas_wellhead_entity.minable.result = "adamo-carbon-gas-wellhead"
 natural_gas_wellhead_entity.resistances = {{
@@ -664,7 +664,7 @@ natural_gas_wellhead_entity.resistances = {{
 }}
 natural_gas_wellhead_entity.animations = {
 	frame_count = 1,
-	filename = "__fixadamo-carbon__/graphics/blank.png",
+	filename = "__carbon-legacy-updated__/graphics/blank.png",
 	size = 32,
 }
 natural_gas_wellhead_entity.working_sound = {
@@ -673,12 +673,12 @@ natural_gas_wellhead_entity.working_sound = {
 		},
 		apparent_volume = 1
 }
-natural_gas_wellhead_entity.collision_mask = {"item-layer", "object-layer", "water-tile"}
+natural_gas_wellhead_entity.collision_mask = {layers={item=true,object=true,water_tile=true}}
 
 natural_gas_wellhead_item = util.table.deepcopy(data.raw.item.pumpjack)
 natural_gas_wellhead_item.name = "adamo-carbon-gas-wellhead"
 natural_gas_wellhead_item.icon_size = 32
-natural_gas_wellhead_item.icon = "__fixadamo-carbon__/graphics/icons/natural-gas-wellhead.png"
+natural_gas_wellhead_item.icon = "__carbon-legacy-updated__/graphics/icons/natural-gas-wellhead.png"
 natural_gas_wellhead_item.order = "b[fluids]-b[adamo-carbon-gas-wellhead]"
 natural_gas_wellhead_item.place_result = "adamo-carbon-gas-wellhead"
 natural_gas_wellhead_item.stack_size = 50
@@ -703,7 +703,7 @@ natural_gas_wellhead_recipe = {
 gasifier_entity = {
 	type = "furnace",
 	name = "adamo-carbon-gasifier",
-	icon = "__fixadamo-carbon__/graphics/icons/gasifier.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/gasifier.png",
 	icon_size = 32,
 	flags = {"placeable-neutral","player-creation"},
 	minable = {
@@ -750,7 +750,7 @@ gasifier_entity = {
 	result_inventory_size = 0,
 	animation = {
 		filename =
-			"__fixadamo-carbon__/graphics/entity/"
+			"__carbon-legacy-updated__/graphics/entity/"
 			.."gasifier.png",
 		priority="high",
 		width = 160,
@@ -761,7 +761,7 @@ gasifier_entity = {
 	working_visualisations = {{
 			animation = {
 				filename =
-					"__fixadamo-carbon__/graphics/entity/"
+					"__carbon-legacy-updated__/graphics/entity/"
 					.."gasifier-fumes.png",
 				priority = "extra-high",
 				frame_count = 29,
@@ -830,7 +830,7 @@ gasifier_smoke = trivial_smoke {
 gasifier_item = {
 	type = "item",
 	name = "adamo-carbon-gasifier",
-	icon = "__fixadamo-carbon__/graphics/icons/gasifier.png",
+	icon = "__carbon-legacy-updated__/graphics/icons/gasifier.png",
 	icon_size = 32,
 	subgroup = "smelting-machine",
 	order = "d[adamo-carbon-gasifier]",
@@ -855,3 +855,7 @@ gasifier_recipe = {
 }
 
 apply_data()
+require("compatibility")()
+
+
+

@@ -160,3 +160,4 @@ for _,category_name in pairs({
 		end
 	end
 end
+require("compatibility")()

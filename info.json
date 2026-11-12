@@ -1,12 +1,16 @@
 {
-        "name": "fixadamo-carbon",
-        "version": "0.4.0",
-        "title": "Carbon",
-        "author": "lool23232",
-        "dependencies": [
-                "base",
-                "? adamo-physics"
-        ],
-        "description": "Hydrocarbons go in, hydrocarbons come out. You can't explain that.",
-        "factorio_version": "1.1"
+  "name": "carbon-legacy-updated",
+  "version": "0.5.0",
+  "title": "Carbon: Legacy Updated",
+  "author": "lool23232; johnmart19 / FactorioMods (legacy-state port)",
+  "dependencies": [
+    "base >= 2.1.24",
+    "? adamo-physics",
+    "! fixadamo-carbon"
+  ],
+  "description": "Legacy Adamo Carbon mechanics for Factorio 2.1 without Space Age: original natural gas, syngas, methane, gasifier recipes and startup choices.",
+  "factorio_version": "2.1",
+  "migrates_from": [
+    "fixadamo-carbon"
+  ]
 }

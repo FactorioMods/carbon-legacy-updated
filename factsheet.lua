@@ -1570,17 +1570,7 @@ get_result = function(recipe,index)
 end
 
 set_productivity_recipe = function(recipe_name)
-	local recipe_name = string_name_or_bust(recipe_name)
-	if not recipe_name then return end
-	for k,v in pairs({
-			data.raw.module["productivity-module"],
-			data.raw.module["productivity-module-2"],
-			data.raw.module["productivity-module-3"]
-		}) do
-  		if v.limitation then  
-      		table.insert(v.limitation, recipe_name) 
-		end
-	end
+ local r=data.raw.recipe[string_name_or_bust(recipe_name)];if r then r.allow_productivity=true end
 end
 
 set_productivity_recipes = function(recipe_names)
@@ -1598,16 +1588,7 @@ add_productivity_recipes = function(recipe_names)
 end
 
 is_productivity_recipe = function(recipe_name)
-	local recipe_name = string_name_or_bust(recipe_name)
-	if not data.raw.recipe[recipe_name] then return false end
-	for k,listed_recipe_name in pairs(
-		data.raw.module["productivity-module"].limitation
-	) do
-		if listed_recipe_name == recipe_name then
-			return true
-		end
-	end
-	return false
+ local r=data.raw.recipe[string_name_or_bust(recipe_name)];return r and r.allow_productivity or false
 end
 
 find_unused_layer = function()
